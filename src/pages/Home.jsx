@@ -1,49 +1,70 @@
 import { useState } from "react";
 import blogs from "../data/blogs";
-import BlogCard from "../components/BlogCard";
+import { Link } from "react-router-dom";
 
-function Home() {
+export default function Home() {
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All");
 
-  const filteredBlogs = blogs.filter(blog => {
-    const matchesSearch = blog.title.toLowerCase().includes(search.toLowerCase());
-    const matchesCategory = category === "All" || blog.category === category;
-    return matchesSearch && matchesCategory;
-  });
+  const filtered = blogs.filter(b =>
+    b.title.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-4xl font-bold mb-6 text-center">
-        Latest Articles
-      </h1>
+    <main className="bg-gray-50 min-h-screen">
+      {/* Hero */}
+      <section className="bg-white border-b">
+        <div className="max-w-6xl mx-auto px-6 py-20 text-center">
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
+            Read. Learn. Build.
+          </h1>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            High-quality articles on React, frontend engineering, and career growth.
+          </p>
+        </div>
+      </section>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-8">
-        <input
-          className="flex-1 px-4 py-2 border rounded"
-          placeholder="Search blogs..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+      {/* Content */}
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        {/* Search */}
+        <div className="mb-10 flex justify-center">
+          <input
+            type="text"
+            placeholder="Search articles..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full max-w-xl px-5 py-3 rounded-full border shadow-sm focus:outline-none focus:ring-2 focus:ring-black"
+          />
+        </div>
 
-        <select
-          className="px-4 py-2 border rounded"
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option>All</option>
-          <option>React</option>
-          <option>CSS</option>
-          <option>Career</option>
-        </select>
-      </div>
+        {/* Blog grid */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map(blog => (
+            <Link
+              key={blog.id}
+              to={`/blog/${blog.id}`}
+              className="group"
+            >
+              <article className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+                <span className="text-sm font-medium text-gray-500">
+                  {blog.category}
+                </span>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredBlogs.map(blog => (
-          <BlogCard key={blog.id} blog={blog} />
-        ))}
-      </div>
-    </section>
+                <h2 className="mt-3 text-xl font-bold text-gray-900 group-hover:underline">
+                  {blog.title}
+                </h2>
+
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
+                  {blog.content.slice(0, 90)}...
+                </p>
+
+                <div className="mt-5 text-sm font-semibold text-black">
+                  Read more →
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
-
-export default Home;
