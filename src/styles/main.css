@@ -1,16 +1,40 @@
-/* Basic layout and components styles for the demo blog UI */
-:root{
-  --bg:#ffffff;
-  --fg:#111827;
-  --accent:#2563eb;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
 }
-body{font-family:Inter,ui-sans-serif,system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--fg); background:var(--bg); margin:0}
-.container{max-width:1000px;margin:0 auto;padding:1rem}
-.navbar{background:#f8fafc;padding:.75rem 0;border-bottom:1px solid #e6e9ee}
-.brand{margin:0;font-size:1.25rem}
-.home .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
-.blog-card{padding:1rem;border:1px solid #e6e9ee;border-radius:6px;background:#fff}
-.blog-card .title{margin:0 0 .5rem}
-.read-more{color:var(--accent);text-decoration:none}
-.site-footer{padding:1rem 0;margin-top:2rem;border-top:1px solid #e6e9ee;text-align:center;color:#6b7280}
-.blog-detail .meta{color:#6b7280;margin-bottom:1rem}
+
+.navbar {
+  padding: 1rem 2rem;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.blog-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
