@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <header className="bg-white border-b sticky top-0 z-50">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-xl font-bold text-gray-900">
+        <Link to="/" className="text-xl font-bold">
           ReactBlog
         </Link>
 

@@ -4,10 +4,10 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <div className="min-h-screen bg-gray-50 text-gray-900">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,5 +18,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

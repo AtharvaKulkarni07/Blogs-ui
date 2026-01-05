@@ -11,7 +11,7 @@ export default function Blog() {
     <article className="max-w-3xl mx-auto px-6 py-20">
       <span className="text-sm text-gray-500">{blog.category}</span>
 
-      <h1 className="mt-3 text-4xl font-extrabold text-gray-900">
+      <h1 className="mt-3 text-4xl font-extrabold">
         {blog.title}
       </h1>
 
