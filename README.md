@@ -1,16 +1,65 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Blog UI
 
-Currently, two official plugins are available:
+Clean, responsive blog UI built with React, Vite, and Tailwind CSS — a lightweight starter for building blog interfaces and prototypes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Responsive layout and mobile-friendly styles
+- Light / dark theme toggle
+- Blog list cards and dedicated blog detail pages
+- Component-driven architecture using functional React
+- Fast development with Vite HMR and utility-first styling via Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS & PostCSS
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Quickstart
+
+Prerequisites: Node.js 18+ and npm (or yarn)
+
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+Build for production and preview the build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project Structure (important files)
+
+- [src/App.jsx](src/App.jsx) — application root and routes
+- [src/main.jsx](src/main.jsx) — client entry and app bootstrap
+- [src/index.css](src/index.css) — global styles + Tailwind imports
+- [src/components/BlogCard.jsx](src/components/BlogCard.jsx) — blog card UI
+- [src/components/Navbar.jsx](src/components/Navbar.jsx) — top navigation
+- [src/components/ThemeToggle.jsx](src/components/ThemeToggle.jsx) — theme switch
+- [src/data/blogs.js](src/data/blogs.js) — sample blog data
+
+## Customization
+
+- To add or edit posts, update `[src/data/blogs.js](src/data/blogs.js)` or replace with an API data source.
+- Tailwind styles are configured in `tailwind.config.js`; edit the theme or add plugins there.
+- Theme state is handled in `ThemeToggle.jsx` — connect it to persistent storage if you want remembered preferences.
+
+## Contributing
+
+Contributions, bug reports, and suggestions are welcome. Please open an issue or submit a pull request describing the change.
+
+## License
+
+MIT — change this to your preferred license if needed.
+
+## Contact
+
+If you need help or want to collaborate, open an issue or reach out via the project repository.
