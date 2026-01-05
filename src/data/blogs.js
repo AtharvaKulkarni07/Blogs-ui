@@ -1,20 +1,18 @@
 const blogs = [
   {
     id: 1,
-    title: 'Welcome to the React Blog',
-    excerpt: 'A short intro to this demo blog built with React and Vite.',
-    content: 'This is a sample post used to demo the React Blog UI. Replace with real content.',
-    date: '2026-01-05',
-    author: 'Admin'
+    title: "Getting Started with React",
+    description: "A beginner-friendly guide to understanding React basics.",
+    content:
+      "React is a JavaScript library used for building user interfaces. It allows developers to create reusable components..."
   },
   {
     id: 2,
-    title: 'Second Post',
-    excerpt: 'Another short excerpt for the second demo post.',
-    content: 'More sample content. Swap in your own articles or wire to an API.',
-    date: '2026-01-04',
-    author: 'Writer'
+    title: "Why Frontend Developers Should Learn Git",
+    description: "Git is not optional anymore. Here's why it matters.",
+    content:
+      "Version control helps developers collaborate, track changes, and maintain code quality..."
   }
-]
+];
 
-export default blogs
+export default blogs;
