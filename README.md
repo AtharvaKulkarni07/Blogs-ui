@@ -56,10 +56,6 @@ npm run preview
 
 Contributions, bug reports, and suggestions are welcome. Please open an issue or submit a pull request describing the change.
 
-## License
-
-MIT — change this to your preferred license if needed.
-
 ## Contact
 
 If you need help or want to collaborate, open an issue or reach out via the project repository.
