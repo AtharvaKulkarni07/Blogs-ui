@@ -1,11 +1,11 @@
-import React from 'react'
-
-export default function BlogCard({blog}){
+function BlogCard({ title, description }) {
   return (
-    <article className="blog-card">
-      <h2 className="title">{blog.title}</h2>
-      <p className="excerpt">{blog.excerpt}</p>
-      <a className="read-more" href={`/blog/${blog.id}`}>Read more</a>
-    </article>
-  )
+    <div className="blog-card">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      <button>Read More</button>
+    </div>
+  );
 }
+
+export default BlogCard;

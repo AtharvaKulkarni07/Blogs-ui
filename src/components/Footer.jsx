@@ -1,9 +1,9 @@
-import React from 'react'
-
-export default function Footer(){
+function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="container">© {new Date().getFullYear()} React Blog</div>
+    <footer className="footer">
+      <p>© 2026 ReactBlog</p>
     </footer>
-  )
+  );
 }
+
+export default Footer;
