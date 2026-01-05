@@ -1,16 +1,10 @@
-import React from 'react'
-import {useParams} from 'react-router-dom'
-import blogs from '../data/blogs'
-
-export default function BlogDetail(){
-  const {id} = useParams() || {}
-  const blog = blogs.find(b => String(b.id) === String(id)) || blogs[0]
-
+function BlogDetail() {
   return (
-    <main className="blog-detail container">
-      <h2>{blog.title}</h2>
-      <p className="meta">By {blog.author} — {blog.date}</p>
-      <article className="content">{blog.content}</article>
-    </main>
-  )
+    <section className="container">
+      <h1>Blog Title</h1>
+      <p>Full blog content goes here...</p>
+    </section>
+  );
 }
+
+export default BlogDetail;

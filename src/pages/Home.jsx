@@ -1,16 +1,22 @@
-import React from 'react'
-import BlogCard from '../components/BlogCard'
-import blogs from '../data/blogs'
+import blogs from "../data/blogs";
+import BlogCard from "../components/BlogCard";
 
-export default function Home(){
+function Home() {
   return (
-    <main className="home container">
-      <h2>Latest Posts</h2>
-      <section className="posts">
-        {blogs.map(b => (
-          <BlogCard key={b.id} blog={b} />
+    <section className="container">
+      <h1>Latest Blogs</h1>
+
+      <div className="blog-grid">
+        {blogs.map((blog) => (
+          <BlogCard
+            key={blog.id}
+            title={blog.title}
+            description={blog.description}
+          />
         ))}
-      </section>
-    </main>
-  )
+      </div>
+    </section>
+  );
 }
+
+export default Home;
