@@ -1,7 +1,9 @@
 function Footer() {
   return (
-    <footer className="footer">
-      <p>© 2026 ReactBlog</p>
+    <footer className="bg-gray-800 text-white py-6 mt-12">
+      <p className="text-center text-gray-400">
+        © 2026 All rights reserved.
+      </p>
     </footer>
   );
 }
