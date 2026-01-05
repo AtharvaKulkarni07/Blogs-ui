@@ -1,13 +1,20 @@
+import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
+
 function Navbar() {
   return (
-    <nav className="bg-gray-900 text-white py-4 px-8 flex justify-between items-center shadow-md">
-      <h2 className="text-2xl font-bold">ReactBlog</h2>
-      <ul className="flex gap-6">
-        <li className="hover:text-yellow-400 cursor-pointer">Home</li>
-        <li className="hover:text-yellow-400 cursor-pointer">About</li>
-        <li className="hover:text-yellow-400 cursor-pointer">Projects</li>
-        <li className="hover:text-yellow-400 cursor-pointer">Contact</li>
-      </ul>
+    <nav className="bg-white dark:bg-gray-800 shadow">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <Link to="/" className="text-xl font-bold">
+          ReactBlog
+        </Link>
+
+        <div className="flex items-center gap-6">
+          <Link to="/" className="hover:text-blue-500">Home</Link>
+          <Link to="/about" className="hover:text-blue-500">About</Link>
+          <ThemeToggle />
+        </div>
+      </div>
     </nav>
   );
 }

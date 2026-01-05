@@ -1,17 +1,21 @@
 const blogs = [
   {
-    id: 1,
+    id: "1",
     title: "Getting Started with React",
-    description: "A beginner-friendly guide to understanding React basics.",
-    content:
-      "React is a JavaScript library used for building user interfaces. It allows developers to create reusable components..."
+    category: "React",
+    content: "React is a JavaScript library for building UI..."
   },
   {
-    id: 2,
-    title: "Why Frontend Developers Should Learn Git",
-    description: "Git is not optional anymore. Here's why it matters.",
-    content:
-      "Version control helps developers collaborate, track changes, and maintain code quality..."
+    id: "2",
+    title: "Why Tailwind CSS is Powerful",
+    category: "CSS",
+    content: "Tailwind allows rapid UI development..."
+  },
+  {
+    id: "3",
+    title: "Frontend Roadmap 2026",
+    category: "Career",
+    content: "To become a frontend dev, focus on..."
   }
 ];
 
